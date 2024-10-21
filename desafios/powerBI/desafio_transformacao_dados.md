@@ -24,3 +24,13 @@
 10. removi a linha inferior, que seria a do manager, pois como ele não possui gerente, nao faz sentido estar na relação.
 
 11. eliminei colunas desnecessárias para o relatório.
+
+12. para saber quantos fucnionários são atribuídos a cada gerente:
+```
+select e.Super_ssn as Ssn_mngr, CONCAT(e2.Fname,' ',e2.Lname) as name_mngr,
+count(*) as total_employees
+from employee e
+left join employee e2 on e.Super_ssn = e2.Ssn
+where e.Super_ssn is not null
+group by e.Super_ssn;
+```
