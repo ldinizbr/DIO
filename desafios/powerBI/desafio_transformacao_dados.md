@@ -1,4 +1,4 @@
-#Transformação de dados
+# Transformação de Dados
 
 1. mudando cabeçalhos
 	- defini nomes baseados em sufixos como _depto, _func, _depend, _end, _prod e _proj
@@ -21,4 +21,6 @@
 
 9. fiz drill down em employee atraves da matricula_mngr e deixei apenas os campos nome (mesclado com sobrenome) e matricula, tanto para funcionario, quanto para manager.
 
-10. removi a linha inferior, que seria a do manager, pois como ele não possui gerente, nao faz sentido estar na relação
+10. removi a linha inferior, que seria a do manager, pois como ele não possui gerente, nao faz sentido estar na relação.
+
+11. eliminei colunas desnecessárias para o relatório.
