@@ -17,7 +17,7 @@ O enunciado se encontra no arquivo '[desafio proposto.docx](https://github.com/O
     - 'mediana do valor de vendas': calculou a mediana de 'Sales' agrupada por produto
     - 'media de manufatura': calculou a media de 'Manufacturing Price' agrupada por produto
       
-    Após isso, inseri uma coluna de índice a partir de 0, renomeei para 'id_produto' e as ordenei as colunas como achei necessário.
+    Após isso, inseri uma coluna de índice a partir de 0, renomeei para 'id_produto' e ordenei as colunas como achei necessário.
 
 4. Na segunda, nomeei-a 'D_Descontos', removi todas as colunas, exceto 'Product', 'Discount Band' e 'Discounts', adicionei uma coluna condicional, substituindo os valores de 'product' pelos seus respectivos ids, criados na tabela 'D_Produtos' e então removi a coluna 'product'.
     Ordenei as linhas de forma crescente por 'id_produto', 'Discount Band' e 'Discounts' e então inseri uma coluna de índice, chamada 'id_descontos'.
@@ -30,7 +30,7 @@ Total Sale Price = Table.AddColumn(#"Tipo Alterado", "Personalizar", each [Sale 
 6. Na quarta, 'D_Detalhes' (detalhes de vendas), deixei as colunas 'Segment', 'Country', 'Product', 'Gross Sales', 'Sales', 'COGS' e 'Profit', ordenei de forma crescente por 'Product', 'Segment', 'Country' e 'Sales' e inseri uma coluna índice do 0, nomeado 'id_detalhes'.
 
 7. Na tabela fato, 'F_Vendas', removi 'COGS', 'Month Number', 'Manufacturing Price' e 'Gross Sales' e adicionei um índice, 'SK_id' (Surrogate Key).
-    Para conseguir adicionar os devidos ids para as chaves estrangeiras 'id_detalhes', 'id_descontos' e 'id_produto_detalhes', fiz a ordenação da tabela de acordo com cada uma das respectivas tabelas, fui inserindo indices e renomeando-os de acordo, pois o PowerBI não permite o relacionamento por mais de um campo.
+    Para conseguir adicionar os devidos ids para as chaves estrangeiras 'id_detalhes', 'id_descontos' e 'id_produto_detalhes', fiz a ordenação da tabela de acordo com a ordenação de cada uma das respectivas tabelas, fui inserindo indices e renomeando-os de acordo, pois o PowerBI não permite o relacionamento por mais de um campo.
     Por fim, substitui 'Product' por 'id_produto'.
 
 8. Conferi novamente os tipos de dados, ajustei quando necessário e mudei a disposição das colunas para visualização.
